@@ -1,17 +1,33 @@
 aid: advanced-ionics
 name: Advanced Ionics
-description: 'Advanced Ionics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Advanced Ionics is a Milwaukee, Wisconsin based clean-energy hardware company
+  developing the Symbion water-vapor electrolyzer, a green hydrogen production technology
+  that uses process and waste heat together with low-cost renewable or nuclear electricity
+  to cut the energy needed per kilogram of hydrogen to roughly 35 kWh, well below the
+  50-plus kWh required by conventional commercial electrolyzers. Founded in 2017 and
+  relocated to Milwaukee in 2018, the company targets decarbonization of heavy industry
+  — steel, ammonia, refining and other hydrogen-intensive sectors — and has run pilot and
+  demonstration projects with Shell through its GameChanger program and with the
+  Entrepreneurs Fund of the Repsol Foundation, and signed a collaboration MOU with ACWA
+  Power. Advanced Ionics manufactures electrolyzer hardware; it does not operate a public
+  developer program, and no public API, SDK, or machine-readable specification was found.'
 url: https://raw.githubusercontent.com/api-evangelist/advanced-ionics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
 x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-07'
 modified: '2026-09-07'
 tags:
 - Company
+- Energy
+- Hydrogen
+- Clean Energy
+- Electrolyzer
+- Manufacturing
+- Industrial
+- Hardware
+- Climate Tech
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +35,29 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/advanced-ionics-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://advanced-ionics.com/
+x-enrichment:
+  date: '2026-09-07'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Advanced Ionics manufactures Symbion water-vapor electrolyzers as physical
+    industrial hardware, and certificate-transparency logs show only the apex domain
+    advanced-ionics.com has ever been issued a certificate — no api, docs, developer
+    or portal host has ever existed — with no GitHub organization and no package in
+    any public registry to accompany one.
+  evidence:
+  - url: https://crt.sh/?q=%25.advanced-ionics.com&output=json
+    status: 200
+  - url: https://api.github.com/orgs/advanced-ionics
+    status: 404
+  - url: https://advanced-ionics.com/.well-known/api-catalog
+    status: 202
+  checked: '2026-09-07'

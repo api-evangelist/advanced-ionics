@@ -1,0 +1,76 @@
+generated: '2026-09-07'
+method: probed
+source: live HTTPS probes of the named /.well-known/ path list on every host this record knows
+note: 'No /.well-known/ document was served by any host. Every path on advanced-ionics.com and www.advanced-ionics.com
+  answers HTTP 202 with a SiteGround JavaScript proof-of-work ''Robot Challenge Screen'' (sg-captcha:
+  challenge, x-robots-tag: noindex) rather than a document — the same interstitial is returned for the
+  site root, so this is a site-wide anti-bot policy, not a per-path result. No WellKnown or SecurityTxt
+  pointer is emitted: a 202 challenge body is not a served document, and the probe records an absence.'
+hosts:
+- host: advanced-ionics.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 202
+    file: null
+    note: 'SiteGround bot-challenge interstitial (sg-captcha: challenge), not a document'
+  - path: /.well-known/openid-configuration
+    status: 202
+    file: null
+    note: 'SiteGround bot-challenge interstitial (sg-captcha: challenge), not a document'
+  - path: /.well-known/oauth-authorization-server
+    status: 202
+    file: null
+    note: 'SiteGround bot-challenge interstitial (sg-captcha: challenge), not a document'
+  - path: /.well-known/api-catalog
+    status: 202
+    file: null
+    note: 'SiteGround bot-challenge interstitial (sg-captcha: challenge), not a document'
+  - path: /.well-known/ai-plugin.json
+    status: 202
+    file: null
+    note: 'SiteGround bot-challenge interstitial (sg-captcha: challenge), not a document'
+  - path: /.well-known/agent-card.json
+    status: 202
+    file: null
+    note: 'SiteGround bot-challenge interstitial (sg-captcha: challenge), not a document'
+  - path: /.well-known/agent.json
+    status: 202
+    file: null
+    note: 'SiteGround bot-challenge interstitial (sg-captcha: challenge), not a document'
+- host: www.advanced-ionics.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 202
+    file: null
+    note: 'SiteGround bot-challenge interstitial (sg-captcha: challenge), not a document'
+  - path: /.well-known/openid-configuration
+    status: 202
+    file: null
+    note: 'SiteGround bot-challenge interstitial (sg-captcha: challenge), not a document'
+  - path: /.well-known/oauth-authorization-server
+    status: 202
+    file: null
+    note: 'SiteGround bot-challenge interstitial (sg-captcha: challenge), not a document'
+  - path: /.well-known/api-catalog
+    status: 202
+    file: null
+    note: 'SiteGround bot-challenge interstitial (sg-captcha: challenge), not a document'
+  - path: /.well-known/ai-plugin.json
+    status: 202
+    file: null
+    note: 'SiteGround bot-challenge interstitial (sg-captcha: challenge), not a document'
+  - path: /.well-known/agent-card.json
+    status: 202
+    file: null
+    note: 'SiteGround bot-challenge interstitial (sg-captcha: challenge), not a document'
+  - path: /.well-known/agent.json
+    status: 202
+    file: null
+    note: 'SiteGround bot-challenge interstitial (sg-captcha: challenge), not a document'
+- host: docs.advanced-ionics.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+    note: TLS handshake fails on 443; port 80 redirects to a Google Workspace account sign-in (docs.google.com/a/advanced-ionics.com).
+      A vanity Google Docs alias, not a developer documentation host.
